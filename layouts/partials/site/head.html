@@ -1,0 +1,11 @@
+<head>
+  <meta charset="utf-8">
+  <!-- CSS Path for 3 Subfolder pages (building, support, systems) -->
+  {{ $css := "../css/application.css" | absURL }}
+  <!-- If this is the Home Page: index.html, change Path for css file -->
+  {{ if .IsHome }}{{ $css = "css/application.css" | absURL }}{{ end }}
+  <link href="{{ $css }}" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {{ $title := print .Site.Title " - " .Title }}
+  <title>{{ $title }}</title>
+</head>

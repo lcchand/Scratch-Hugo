@@ -1,0 +1,69 @@
+/*-------------------------------*/
+/*   footer.scss                 */
+/*-------------------------------*/
+
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $Frame-Color-Dk;
+    color: $White;
+    padding: 10px;
+    
+     @media #{$brk-tablet} {
+	flex-direction: row;
+	justify-content: flex-start;
+    }
+}
+
+
+
+address {
+    font-size: .8em;
+    font-style: normal;
+    letter-spacing: 1px;
+    
+    @media #{$brk-tablet} {
+	flex-direction: row;
+    }
+}
+
+
+
+// Sentara Data Center Address - Match Sidebar Width
+address:nth-of-type(1n) {
+
+    @media #{$brk-tablet} {
+	flex-basis: 270px;
+    }
+}
+
+
+
+.address_h4{
+    color: $Frame-Color-Text;
+    letter-spacing: 2px;
+    text-transform: uppercase;  
+}
+
+
+
+.footer_span {
+    color: $Frame-Color-Text;
+    border-bottom: solid 1px $Frame-Color-Text;
+    margin-bottom: 1.2em;
+    
+    @media #{$brk-tablet} {
+	margin-bottom: 0;
+	margin-left: 2em;
+	margin-right: 2em;
+	border-bottom: none;
+	border-right: solid 1px $Frame-Color-Text;
+    }
+}
+
+
+

@@ -1,0 +1,151 @@
+/*-------------------------------*/
+/*   _tab-panels.scss            */
+/*-------------------------------*/
+
+/* 
+Tab Panels & Sections:
+---------------------
+Original content is in Markdown and is parsed by 
+Static Site Generator.
+
+Therefore: CSS Attribute, Child, Adjacent and 
+General Sibling Selectors are used instead of
+a BEM naming convention.
+
+Tabs: (Use the "Input Check Box Hack" to hide/show content)
+Original example: https://codepen.io/oknoblich/pen/tfjFl (no longerin codepen)
+Similar example: https://codepen.io/BrandonBento/pen/MGmZyq
+*/
+
+
+
+/* Input Check Boxes & Labels */
+input {
+    display: none;
+}
+
+
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+}
+
+label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label[for*='1']:before { content: '\f02c'; } /* fa-tags */
+label[for*='2']:before { content: '\f073'; } /* fa-calendar */
+label[for*='3']:before { content: '\f02d'; } /* fa-book */
+label[for*='4']:before { content: '\f1a9'; } /* Drupal */
+label[for*='_ah']:before { content: '\f186'; } /* Crescent Moon */
+
+label:hover {
+    color: #888;
+    cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid var(--Theme-Color);
+  border-bottom: 1px solid #fff;
+}
+
+
+
+/* Mobile Screen - Hide Label Text / Display Icons */
+@media screen and (max-width: 650px) {
+    label {
+	font-size: 0;
+    }
+    label:before {
+	margin: 0;
+	font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    label {
+	padding: 15px;
+    }
+}
+
+
+
+/* Sections & Headings */
+section h2 {
+  padding: .5em .5em .75em .5em;
+  margin-bottom: .5em;
+  color: var(--Theme-Color-Dk);
+  border-top: 3px solid var(--Theme-Color);
+  border-bottom: 3px solid var(--Theme-Color);
+  
+  @media #{$brk-tablet} {
+    margin-bottom: 1.0em;
+  }
+}
+
+
+
+section h3 {
+ //padding-bottom: .25em;
+  color: var(--Theme-Color-Dk);
+}
+
+
+
+section#content1,
+section#content2,
+section#content3,
+section#content4,
+section#content_ah {
+  display: none;
+  padding: 1em 10px 10px 10px;
+  margin-top: 0;
+  border: 1px solid #ddd;
+}
+
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab_ah:checked ~ #content_ah {
+    display: block;
+}
+
+section#content1 h4 {
+    font-weight: normal;
+}
+
+
+
+/* Ordered List Items */
+section#content1 li,
+section#content2 li,
+section#content3 li,
+section#content4 li,
+section#content_ah li {
+    padding-left: 0.5em;
+}
+
+
+
+section#content1 ol,
+section#content2 ol,
+section#content3 ol,
+section#content4 ol,
+section#content_ah ol {
+    margin-bottom: 1.5em;
+}
+
+

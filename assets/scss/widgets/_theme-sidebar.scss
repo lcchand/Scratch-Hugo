@@ -1,0 +1,80 @@
+
+/*-------------------------------*/
+/*   _theme-sidebar.scss         */
+/*-------------------------------*/
+
+
+ 
+   
+/* Sidebar Element, H3 Text, ahref */
+
+aside {
+    display: none;
+    flex-shrink: 0;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    width: 100%;
+    transition: all .3s;
+    animation: 0.3s ease-in-out sidebaropen;
+    
+    @media #{$brk-tablet} {
+        margin-top: 0.5em;
+        margin-bottom: 0;
+        display: block;
+        width: 300px;
+	transition: all .3s;
+
+    }
+
+
+    //Aside - Background Colors for each 3 Categories 
+    &.aside-bgcolor--bldg {
+	background-color: var(--Theme-Color-Md);
+    }
+
+    &.aside-bgcolor--support {
+	background-color: var(--Theme-Color-Lt);
+        border: 2px solid var(--Theme-Color);
+    }
+    
+    &.aside-bgcolor--system {
+	background-color: var(--Theme-Color-Lt);
+	border: 2px solid var(--Theme-Color);
+    }  
+    
+    h3 {
+	padding: .5em 0 .5em .5em;
+    }
+
+    a {
+	color: $Body-Text-Color;
+	width: 100%;
+    }
+
+    /*
+    svg {
+        width: 82px;
+        fill: $White;
+        padding: 0 .5em .25em 0;
+        float: right;
+    }
+    */
+}
+
+.aside-mobile--show {
+    display: block;
+    flex-shrink: 0;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    width: 100%;
+    transition: all .3s;
+}
+
+
+@keyframes sidebaropen {
+    from { opacity: 0}
+    to { opacity: 1}
+}
+
+
+

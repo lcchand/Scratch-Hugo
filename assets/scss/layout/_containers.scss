@@ -1,0 +1,196 @@
+/*-------------------------------*/
+/* _containers - main,section,etc*/
+/*-------------------------------*/
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #fff;
+    padding: 10px;
+    
+    @media #{$brk-tablet} {
+        flex-direction: row;
+    }
+    
+}
+
+
+
+// Home Page Exceptions
+.main--homepage {
+    background: #fff;
+    margin: 0;
+    padding: 0px;
+
+    @media #{$brk-tablet} {
+	flex-direction: column;
+    }
+    
+}
+
+
+
+section {
+  margin-top: 0.5em;
+  padding: 2px;
+  width: 100%;
+
+
+    @media #{$brk-tablet} {
+        padding-left: 20px;
+    }
+
+}
+
+
+
+/* Home Page Exceptions */
+
+.section--homepage,
+.section--light,
+.section--dark {
+    text-align: center;
+}
+
+
+
+.section--homepage {
+    padding: 15px 25px;
+    margin: 0px;
+
+    @media #{$brk-tablet} {
+	padding: 50px 80px;
+    }
+	
+    h2 {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: .5em;
+    }
+}
+
+
+
+.section--light {
+
+    & h2 {
+	border: none;
+    }
+
+    & a {
+	color: var(--Theme-Color-Dk);
+    }
+}
+
+
+
+.section--dark {
+    background-color: var(--Theme-Color-Dk);
+    color: $White;
+
+        & h2 {
+	color: white;
+    }
+}
+
+
+
+.div_img--1, .div_img--2, .div_img--3 {
+    position: relative;
+    opacity: 0.75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    @media(max-width: 568px) {
+	background-attachment: scroll;
+    }
+    
+}
+
+
+
+.div_img--1 {
+    background-image: url('../assets/main_bldg-exterior.jpg');
+    min-height: 500px;
+}
+
+
+
+.div_img--2 {
+    background-image: url('../assets/pexels-photo-256219.jpeg');
+    min-height: 200px;
+}
+
+
+
+.div_img--3 {
+    background-image: url('../assets/pexels-photo-373543.jpeg');
+    min-height: 200px;
+}
+
+
+
+.ptext {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: $Body-Text-Color;
+    font-size: 27px;
+    letter-spacing: 8px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+
+    .border {
+	background-color: black;
+	color: $White;
+	padding: 0;
+	& p {
+	    margin: 0;
+	}
+
+	&.trans {
+	    background-color: transparent;
+	}
+    }
+}
+
+
+
+/* 3 Landing Pages - Bldg, Support & Systems */
+
+.svg-icon {
+  width: 105px;
+  fill: var(--Theme-Color-Dk);
+}
+
+
+
+.section-landing {
+    width: 100%;
+    text-align: center;
+
+    & h2 {
+	border: none;
+    }
+}
+
+
+
+.category {
+    position: sticky;//new
+    top: 10px;//new
+    margin-top: 10px;
+    padding-top: 0;
+
+     @media #{$brk-tablet} {
+	padding: 0 40px;
+    }
+}
+

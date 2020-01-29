@@ -1,0 +1,37 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ 
+
+
+# Emacs generated file #
+########################
+*~
+*#
+ 
+
+
+# Tern JS Linter - generated files #
+####################################
+.tern-port
+ 
+
+
+# Sass generated files #
+########################
+.sass-cache
+ 
+
+
+# Ignore Folder #
+#################
+# to-be-determined
+
+# Generated files by hugo
+#########################
+/public/
+/resources/_gen/

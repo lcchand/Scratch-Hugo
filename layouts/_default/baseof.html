@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "site/head.html" . }}
+  <body>
+
+    {{ block "main" . }}{{ end }}
+
+    {{ partial "site/footer.html" . }}
+
+    {{ partial "site/load_scripts.html" }}
+
+  </body>
+</html>

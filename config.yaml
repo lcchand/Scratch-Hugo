@@ -1,0 +1,12 @@
+baseURL: "/"
+languageCode: en-us
+title: Sentara Computer Operations 
+relativeURLS: true
+uglyurls: true
+
+permalinks:
+  building: /:section/:filename/
+
+#taxonomies:
+#  category: building
+#  tag: BMS

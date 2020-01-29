@@ -1,0 +1,150 @@
+/*-------------------------------*/
+/*   header.scss                 */
+/*-------------------------------*/
+
+.header--primary,
+.nav_ul--primary {
+    display: flex;
+    flex-direction: column;
+    background: $Frame-Color-Dk;
+
+    @media #{$brk-tablet} {
+	flex-direction: row;
+    }
+}
+
+
+
+// Header
+.header--primary {
+    width: 100%;
+    border-top: 3px solid $Header-Text-Color;
+    text-align: center;
+
+    @media #{$brk-tablet} {
+	align-items: center;
+	justify-content: space-between;
+    }
+}
+
+
+.header_h1--primary {
+    padding: 0;
+    padding-top: .3em;
+    font-size: 1.3em;
+    text-align: center;
+
+    @media #{$brk-tablet} {
+      font-size: 2em;
+      letter-spacing: 2px;
+      padding: 10px 0 12px 10px;
+      text-align: left;
+    }
+
+    @media #{$brk-max} {
+	font-size: 2.441em;
+    }
+}
+
+
+
+.header--primary a {
+    color: $Frame-Color-Text;
+    position: relative;
+}
+
+
+
+// List Items
+.nav_ul--primary {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: .75em;
+
+    @media #{$brk-tablet} {
+	margin-top: 0;
+
+    }
+}
+
+.nav_ul--primary a {
+    font-weight: $OpenSans-weight-semibold;
+    text-decoration: none;
+    color: $White;
+
+}
+
+
+.nav_ul--primary a:hover {
+    color: $Frame-Color-Text;
+}
+
+.nav_ul--primary li {
+    padding: 8.35px;
+
+    @media #{$brk-tablet} {
+        padding: 21.35px;
+    }
+
+    &>button {
+        @media #{$brk-tablet} {
+            padding: 0;
+        }
+    }
+
+}
+
+
+
+.nav_li--primary--bldg--active {
+  background-color: $Bldg-Color;
+}
+
+.nav_li--primary--support--active {
+  background-color: $Support-Color;
+}
+
+.nav_li--primary--systems--active {
+  background-color: $System-Color;
+}
+
+.nav_li--primary--bldg--active>a,
+.nav_li--primary--support--active>a,
+.nav_li--primary--systems--active>a {
+     color: $Frame-Color-Dk;   
+}
+
+
+// Hamburger Button
+.nav_li--hamburger {
+
+    @media #{$brk-tablet} {
+	display: none;
+  }
+}
+
+
+.nav_hamburger--primary {
+    font-family: "fontawesome";
+    font-size: 36px;
+    color: $White;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: -7px;
+
+  @media #{$brk-tablet} {
+    display: none;
+    margin-top: 8em;
+  }
+}
+
+
+.nav_hamburger--primary i {
+    font-style: normal;
+}

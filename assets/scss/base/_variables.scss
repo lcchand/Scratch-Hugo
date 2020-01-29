@@ -1,0 +1,82 @@
+/*-------------------------------*/
+/*   _variables.scss             */
+/*-------------------------------*/
+
+// Color Variables
+
+$White                   : #fff;
+$Theme-Color             : #eee;
+$Body-Text-Color         : #555;
+$Header-Text-Color       : #72b2e2;
+
+
+$Frame-Color-Dk          : #1d3649;
+$Frame-Color-Md          : #4178BE;
+$Frame-Color-Lt          : #F3F3F3;
+$Frame-Color-Text        : #72b2e2;
+
+
+
+$Sidebar-Color           : #D4D4D4;
+$Sidebar-Color-Md        : #E1E1E1;
+$Sidebar-Color-Lt        : #EEEEEE;
+
+$System-Color            : #1796cc;
+$System-Color-Md         : #87cee8;
+$System-Color-Lt         : #ecf7fc;
+
+$Support-Color           : #83BC7D;
+$Support-Color-Md        : #bdd7b1;
+$Support-Color-Lt        : #e6f1e5;
+
+
+
+$Bldg-Color-Dk: #ec9b07;
+$Bldg-Color: #f9b22f;
+$Bldg-Color-Md: #fac461;
+$Bldg-Color-Lt: #fde9c4;
+
+
+
+// Font Stacks - Google Source Sans Pro
+
+$font-url--OpenSans         : 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700';
+$font-family--OpenSans      : 'Open Sans', sans-serif;
+$font-url--FontAwesome      : 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+$font-url--RobotoSlab       : 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700';
+$font-family--RobotoSlab    : 'Roboto Slab', serif;
+
+
+
+// Font Weights
+
+$OpenSans-weight-regular      : 400;
+$OpenSans-weight-semibold     : 600;
+$OpenSans-weight-bold         : 700;
+
+$RobotoSlab-weight-regular    : 400;
+$RobotoSlab-weight-bold       : 700;
+
+
+//Asset Paths
+
+$path-icon         : 'icons';
+
+
+
+// Global Margins
+
+$margin-mobile        : 10px;
+$margin-tablet        : 15px;
+$margin-max           : 20px;
+
+
+
+// Media query Breakpoints
+
+$brk-mobile           : '(min-width: 320px)';
+$brk-mobile-landscape : '(min-width: 568px)';
+$brk-tablet           : '(min-width: 768px)';
+$brk-desktop          : '(min-width: 1024px)';
+$brk-max              : '(min-width: 1440px)';
+

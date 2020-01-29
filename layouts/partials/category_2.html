@@ -1,0 +1,28 @@
+<!-- Paging for Buisness Hours  -->
+<section id="content2">
+
+  <table>
+    <thead>
+      <tr>
+	<th>Service Now Group</th>
+	<th>ID</th>
+	<th>AMCOM Group</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+	<td colspan="3">{{ .Params.support_date }}</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      { range $.Page.Params.bizsupport }
+      <tr>
+        <td>{{ $.Page.Params.bizsupport.snow_group }}</td>
+        <td>{{ $.Page.Params.bizsupport.id }}</td>
+        <td>{{ $.Page.Params.bizsupport.amcom }}</td>
+      </tr>
+      { end }
+    </tbody>
+  </table>
+</section>
+<!-- End of Paging for Buisness Hours -->

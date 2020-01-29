@@ -1,0 +1,6 @@
+{{ $globalAccordion := resources.Get "./js/accordion-sidebar.js" }}
+{{ $globalHamburger := resources.Get "./js/hamburger.js" }}
+{{ $globalSwitchTheme := resources.Get "./js/switchtheme.js" }}
+<script type="text/javascript" src="{{ $globalAccordion.Permalink }}"></script>
+<script type="text/javascript" src="{{ $globalHamburger.Permalink }}"></script>
+<script type="text/javascript" src="{{ $globalSwitchTheme.Permalink }}"></script>

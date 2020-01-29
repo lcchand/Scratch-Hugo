@@ -1,0 +1,15 @@
+<head>
+  <meta charset="utf-8">
+  <!-- {{ $options := (dict "targetPath" "css/application.css" "outputStyle" "expanded" "enableSourceMap" true) }}
+       {{ $style := resources.Get "scss/application.scss" | resources.ToCSS $options }}
+       <link href="{{ $style.Permalink }}" rel="stylesheet" type="text/css"> -->
+  <!-- CSS Path for 3 Subfolder pages (building, support, systems) -->
+  
+  {{ $css := "../css/application.css" | absURL }}
+  <!-- If this is the Home Page: index.html, change Path for css file -->
+  {{ if .IsHome }}{{ $css = "css/application.css" | absURL }}{{ end }}
+  <link href="{{ $css }}" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sentara Computer Operations - {{ .Title }}</title>
+</head>

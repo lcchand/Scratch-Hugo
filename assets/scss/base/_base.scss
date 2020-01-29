@@ -1,0 +1,130 @@
+/*----------------------------------*/
+/*   _base.scss  (body, h1, p etc)  */
+/*----------------------------------*/
+
+// Any padding or border that’s applied
+// will not be added to the rendered width
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;//Required to resolve incomplete Overlay
+    min-width: 320px;
+}
+
+
+html {
+    background: $White;
+    scroll-behavior: smooth;
+}
+
+@import url($font-url--OpenSans);
+@import url($font-url--FontAwesome);
+@import url($font-url--RobotoSlab);
+
+
+/* CSS Variables for Switching Theme Pallettes */
+:root {
+  --Theme-Color-Dk: #111;
+  --Theme-Color: #333;
+  --Theme-Color-Md: #666;
+  --Theme-Color-Lt: #999;
+
+  --Bldg-Color-Dk: #ec9b07;
+  --Bldg-Color: #f9b22f;
+  --Bldg-Color-Md: #fac461;
+  --Bldg-Color-Lt: #fde9c4;
+
+  --Support-Color-Dk: #83BC7D;
+  --Support-Color: #83BC7D;
+  --Support-Color-Md: #bdd7b1;
+  --Support-Color-Lt: #e6f1e5;
+
+  --System-Color-Dk: #1796cc;
+  --System-Color: #1796cc;
+  --System-Color-Md: #87cee8;
+  --System-Color-Lt: #ecf7fc;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 14px 'Open Sans', sans-serif;
+  font-weight: $OpenSans-weight-regular;
+  line-height: 1.45;
+  color: $Body-Text-Color;
+}
+
+
+.body--homepage {
+    height: 100%;
+}
+
+
+
+
+h1 {
+    margin-top: 0;
+    padding: 50px 0;
+    font-family: $font-family--RobotoSlab;
+    font-weight: $RobotoSlab-weight-regular;
+    font-size: 2.441em;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: $font-family--RobotoSlab;
+    font-weight: $RobotoSlab-weight-regular;
+    font-size: 1.953em;
+}
+
+h3 {
+    font-family: $font-family--RobotoSlab;
+    font-weight: $RobotoSlab-weight-regular;
+    font-size: 1.563em;
+}
+
+h4 {
+    font-family: $font-family--RobotoSlab;
+    font-weight: $RobotoSlab-weight-regular;
+    font-size: 1.1em;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.45;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol {
+  padding-left: 2.5em;
+}
+
+a {
+    text-decoration: none;
+    color: $White;
+}
+
+dt {
+    font-family: $font-family--RobotoSlab;
+    font-weight: $RobotoSlab-weight-regular;
+    font-size: 1.1em;
+    color: var(--Theme-Color);
+}
+
+dd {
+    padding-left: 1.2em;
+    margin-bottom: 1em;
+}

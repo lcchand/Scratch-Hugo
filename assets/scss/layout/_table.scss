@@ -1,0 +1,77 @@
+/*-------------------------------*/
+/*   table.scss                  */
+/*-------------------------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+thead {
+    border-bottom: 3px solid var(--Theme-Color);
+
+}
+
+caption {
+    color: var(--Theme-Color-Md);
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+thead, tr, td {
+    text-align: left;
+    line-height: 2em;
+}
+
+tbody td:last-child {
+  display: none; //too narrow for 3 columns
+
+  @media #{$brk-tablet} {
+    display: block;
+  }
+}
+
+tr {
+    border-bottom: 2px dotted var(--Theme-Color);
+}
+
+thead th:last-child {
+  display: none; //too narrow for 3 columns
+
+  @media #{$brk-tablet} {
+    display: block;
+  }
+}
+
+tr {
+  border-bottom: 2px dotted var(--Theme-Color);
+
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+tr:hover,
+tr:focus {
+    background-color: var(--Theme-Color-Lt);
+    transition: 0.3s ease-in linear;
+}
+
+thead tr:hover,
+thead tr:focus {
+  background-color: $White;
+  transition: 0.3s ease-in linear;
+}
+
+tfoot tr {
+    border-top: 2px solid var(--Theme-Color);
+    border-bottom: none;
+}
+
+tfoot tr:hover:last-child,
+tfoot tr:focus:last-child {
+  background-color: $White;  
+}
