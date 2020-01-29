@@ -7,6 +7,6 @@ uglyurls: true
 permalinks:
   building: /:section/:filename/
 
-#taxonomies:
+taxonomies:
 #  category: building
-#  tag: BMS
+  tag: Building
