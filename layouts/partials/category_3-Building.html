@@ -1,9 +1,10 @@
+{{ define "main" }}
 <!-- Beginning of Reference content -->
 <section id="content3">
   <dl>
-    {{ range Site.data.building_reference }}
-    <dt>{{ .item.term }}</dt>
-    <dd>{{ .item.definition }}</dd>
+    {{ range .Site.Data.building_reference }}
+    <dt>{{ .building_reference.term }}</dt>
+    <dd>{{ .building_reference.definition }}</dd>
     {{ end }}
   </dl>
 
@@ -12,3 +13,4 @@
   </p>
 </section>
 <!-- End of Reference content -->
+{{ end }}

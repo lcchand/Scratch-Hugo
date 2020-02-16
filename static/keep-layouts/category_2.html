@@ -1,4 +1,4 @@
-
+{{ define "main" }}
 <!-- Paging for Buisness Hours  -->
 <section id="content2">
 
@@ -16,21 +16,15 @@
       </tr>
     </tfoot>
     <tbody>
-      {{ range .Params.Bh_support }}
+      { range .Params.bh_support }
       <tr>
-	{{ if .snow_group }}
-	{{ partial "support_snowgroup.html" (dict "snow_group" .snow_group) }}
-	{{ end }}
-	{{ if .id }}
-	{{ partial "support_id.html" (dict "id" .id) }}
-	{{ end }}
-	{{ if .amcom }}
-	{{ partial "support_amcom.html" (dict "amcom" .amcom) }}
-	{{ end }}
+        <td>Servicenow: {{ .Params.bh_support.snow_group }}</td>
+        <td>ID: {{ .Params.bh_support.id }}</td>
+        <td>AMCOM: {{ .Params.bh_support.amcom }}</td>
       </tr>
-      {{ end }}
+      { end }
     </tbody>
   </table>
 </section>
 <!-- End of Paging for Buisness Hours -->
-
+{{ end }}

@@ -7,6 +7,4 @@ uglyurls: true
 permalinks:
   building: /:section/:filename/
 
-taxonomies:
-#  category: building
-  tag: Building
+

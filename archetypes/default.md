@@ -11,7 +11,7 @@ draft: false
 #
 #
 # Title for Category Section <h2>
-section_title: Section Title
+section_title: My Section
 #
 #
 #

@@ -4,7 +4,7 @@
 #
 #
 # Templates 
-type: static
+type: single
 page: building
 #
 #
@@ -17,10 +17,10 @@ draft: false
 #
 #
 # Title for Category Section <h2>
-section_title: Section Title for Test
+section_title: Building.md (section_title)
 #
-#category: building
-#tag: BMS
+# category: building
+# tag: BMS
 #
 #
 # Support Tab - defines On Call Groups for Table
