@@ -19,13 +19,13 @@
       {{ range .Params.Bh_support }}
       <tr>
 	{{ if .snow_group }}
-	{{ partial "support_snowgroup.html" (dict "snow_group" .snow_group) }}
+	  {{ partial "support_snowgroup.html" (dict "snow_group" .snow_group) }}
 	{{ end }}
 	{{ if .id }}
-	{{ partial "support_id.html" (dict "id" .id) }}
+	  {{ partial "support_id.html" (dict "id" .id) }}
 	{{ end }}
 	{{ if .amcom }}
-	{{ partial "support_amcom.html" (dict "amcom" .amcom) }}
+	  {{ partial "support_amcom.html" (dict "amcom" .amcom) }}
 	{{ end }}
       </tr>
       {{ end }}
