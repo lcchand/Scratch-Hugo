@@ -12,32 +12,25 @@
   </nav>
 </header>
 
-<h2>{{ .Title }}</h2>
-
 <main>
 
   {{ partial "building_sidebar.html" . }}
-  
 
   <section>
     
     {{ partial "category_1.html" . }}
     
     <section id="content1">
-      
       {{ .Content }}
     </section>
     
-    
     {{ partial "category_2.html" . }}
     
-    
-    {{ partial "category_3-Building.html" . }}
+    {{ partial "category_3.html" . }}
   </section>
 
   {{ partial "gotop_button.html" . }}
   
-
   </main>
 
 {{ end }}

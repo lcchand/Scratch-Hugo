@@ -1,0 +1,18 @@
+<!-- section id="content3": Beginning of Reference content -->
+<section id="content3">
+  <dl>
+    {{ range $.Site.Data.building_reference }}
+      {{ if .term }}
+        {{ partial "bldg_ref_term.html" (dict "term" .term) }}
+      {{ end }}
+      {{ if .definition }}
+        {{ partial "bldg_ref_definition.html" (dict "definition" .definition) }}
+      {{ end }}
+    {{ end }}
+  </dl>
+
+  <p>
+    Ante in nibh mauris, cursus mattis molestie a, iaculis at erat pellentesque adipiscing commodo elit, at imperdiet dui accumsan sit amet nulla facilisi. Auctor neque, vitae tempus quam pellentesque nec!
+  </p>
+</section>
+<!-- End of Reference content -->

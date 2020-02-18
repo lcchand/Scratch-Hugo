@@ -1,5 +1,4 @@
-
-<!-- Paging for Buisness Hours  -->
+<!--section id="content2": Paging for Buisness Hours  -->
 <section id="content2">
 
   <table>
@@ -16,8 +15,8 @@
       </tr>
     </tfoot>
     <tbody>
-      {{ range .Params.Bh_support }}
-      <tr>
+      {{ range  .Params.Bh_support  }}
+       <tr>
 	{{ if .snow_group }}
 	  {{ partial "support_snowgroup.html" (dict "snow_group" .snow_group) }}
 	{{ end }}
@@ -33,4 +32,3 @@
   </table>
 </section>
 <!-- End of Paging for Buisness Hours -->
-
