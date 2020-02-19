@@ -1,0 +1,896 @@
+/*-------------------------------*/
+/*   Base Imports                */
+/*-------------------------------*/
+/*-------------------------------*/
+/*   _variables.scss             */
+/*-------------------------------*/
+/*----------------------------------*/
+/*   _base.scss  (body, h1, p etc)  */
+/*----------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  min-width: 320px;
+}
+
+html {
+  background: #fff;
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables for Switching Theme Pallettes */
+:root {
+  --Theme-Color-Dk: #111;
+  --Theme-Color: #333;
+  --Theme-Color-Md: #666;
+  --Theme-Color-Lt: #999;
+  --Bldg-Color-Dk: #ec9b07;
+  --Bldg-Color: #f9b22f;
+  --Bldg-Color-Md: #fac461;
+  --Bldg-Color-Lt: #fde9c4;
+  --Support-Color-Dk: #83BC7D;
+  --Support-Color: #83BC7D;
+  --Support-Color-Md: #bdd7b1;
+  --Support-Color-Lt: #e6f1e5;
+  --System-Color-Dk: #1796cc;
+  --System-Color: #1796cc;
+  --System-Color-Md: #87cee8;
+  --System-Color-Lt: #ecf7fc;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font: 14px 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #555;
+}
+
+.body--homepage {
+  height: 100%;
+}
+
+h1 {
+  margin-top: 0;
+  padding: 50px 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 2.441em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1.953em;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1.563em;
+}
+
+h4 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.45;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ol {
+  padding-left: 2.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+dt {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  color: var(--Theme-Color);
+}
+
+dd {
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+/*-------------------------------*/
+/*   Layout Imports              */
+/*-------------------------------*/
+/*-------------------------------*/
+/* _containers - main,section,etc*/
+/*-------------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #fff;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+.main--homepage {
+  background: #fff;
+  margin: 0;
+  padding: 0px;
+}
+
+@media (min-width: 768px) {
+  .main--homepage {
+    flex-direction: column;
+  }
+}
+
+section {
+  margin-top: 0.5em;
+  padding: 2px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-left: 20px;
+  }
+}
+
+/* Home Page Exceptions */
+.section--homepage,
+.section--light,
+.section--dark {
+  text-align: center;
+}
+
+.section--homepage {
+  padding: 15px 25px;
+  margin: 0px;
+}
+
+@media (min-width: 768px) {
+  .section--homepage {
+    padding: 50px 80px;
+  }
+}
+
+.section--homepage h2 {
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: .5em;
+}
+
+.section--light h2 {
+  border: none;
+}
+
+.section--light a {
+  color: var(--Theme-Color-Dk);
+}
+
+.section--dark {
+  background-color: var(--Theme-Color-Dk);
+  color: #fff;
+}
+
+.section--dark h2 {
+  color: white;
+}
+
+.div_img--1, .div_img--2, .div_img--3 {
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+@media (max-width: 568px) {
+  .div_img--1, .div_img--2, .div_img--3 {
+    background-attachment: scroll;
+  }
+}
+
+.div_img--1 {
+  background-image: url("../assets/main_bldg-exterior.jpg");
+  min-height: 500px;
+}
+
+.div_img--2 {
+  background-image: url("../assets/pexels-photo-256219.jpeg");
+  min-height: 200px;
+}
+
+.div_img--3 {
+  background-image: url("../assets/pexels-photo-373543.jpeg");
+  min-height: 200px;
+}
+
+.ptext {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #555;
+  font-size: 27px;
+  letter-spacing: 8px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: black;
+  color: #fff;
+  padding: 0;
+}
+
+.ptext .border p {
+  margin: 0;
+}
+
+.ptext .border.trans {
+  background-color: transparent;
+}
+
+/* 3 Landing Pages - Bldg, Support & Systems */
+.svg-icon {
+  width: 105px;
+  fill: var(--Theme-Color-Dk);
+}
+
+.section-landing {
+  width: 100%;
+  text-align: center;
+}
+
+.section-landing h2 {
+  border: none;
+}
+
+.category {
+  position: sticky;
+  top: 10px;
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .category {
+    padding: 0 40px;
+  }
+}
+
+/*-------------------------------*/
+/*   header.scss                 */
+/*-------------------------------*/
+.header--primary,
+.nav_ul--primary {
+  display: flex;
+  flex-direction: column;
+  background: #1d3649;
+}
+
+@media (min-width: 768px) {
+  .header--primary,
+  .nav_ul--primary {
+    flex-direction: row;
+  }
+}
+
+.header--primary {
+  width: 100%;
+  border-top: 3px solid #72b2e2;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header--primary {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header_h1--primary {
+  padding: 0;
+  padding-top: .3em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header_h1--primary {
+    font-size: 2em;
+    letter-spacing: 2px;
+    padding: 10px 0 12px 10px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header_h1--primary {
+    font-size: 2.441em;
+  }
+}
+
+.header--primary a {
+  color: #72b2e2;
+  position: relative;
+}
+
+.nav_ul--primary {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: .75em;
+}
+
+@media (min-width: 768px) {
+  .nav_ul--primary {
+    margin-top: 0;
+  }
+}
+
+.nav_ul--primary a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav_ul--primary a:hover {
+  color: #72b2e2;
+}
+
+.nav_ul--primary li {
+  padding: 8.35px;
+}
+
+@media (min-width: 768px) {
+  .nav_ul--primary li {
+    padding: 21.35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav_ul--primary li > button {
+    padding: 0;
+  }
+}
+
+.nav_li--primary--bldg--active {
+  background-color: #f9b22f;
+}
+
+.nav_li--primary--support--active {
+  background-color: #83BC7D;
+}
+
+.nav_li--primary--systems--active {
+  background-color: #1796cc;
+}
+
+.nav_li--primary--bldg--active > a,
+.nav_li--primary--support--active > a,
+.nav_li--primary--systems--active > a {
+  color: #1d3649;
+}
+
+@media (min-width: 768px) {
+  .nav_li--hamburger {
+    display: none;
+  }
+}
+
+.nav_hamburger--primary {
+  font-family: "fontawesome";
+  font-size: 36px;
+  color: #fff;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: right;
+  cursor: pointer;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: -7px;
+}
+
+@media (min-width: 768px) {
+  .nav_hamburger--primary {
+    display: none;
+    margin-top: 8em;
+  }
+}
+
+.nav_hamburger--primary i {
+  font-style: normal;
+}
+
+/*-------------------------------*/
+/*   footer.scss                 */
+/*-------------------------------*/
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1d3649;
+  color: #fff;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+address {
+  font-size: .8em;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  address {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  address:nth-of-type(1n) {
+    flex-basis: 270px;
+  }
+}
+
+.address_h4 {
+  color: #72b2e2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer_span {
+  color: #72b2e2;
+  border-bottom: solid 1px #72b2e2;
+  margin-bottom: 1.2em;
+}
+
+@media (min-width: 768px) {
+  .footer_span {
+    margin-bottom: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-bottom: none;
+    border-right: solid 1px #72b2e2;
+  }
+}
+
+/*-------------------------------*/
+/*   table.scss                  */
+/*-------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+}
+
+thead {
+  border-bottom: 3px solid var(--Theme-Color);
+}
+
+caption {
+  color: var(--Theme-Color-Md);
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+thead, tr, td {
+  text-align: left;
+  line-height: 2em;
+}
+
+tbody td:last-child {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  tbody td:last-child {
+    display: block;
+  }
+}
+
+tr {
+  border-bottom: 2px dotted var(--Theme-Color);
+}
+
+thead th:last-child {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  thead th:last-child {
+    display: block;
+  }
+}
+
+tr {
+  border-bottom: 2px dotted var(--Theme-Color);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:hover,
+tr:focus {
+  background-color: var(--Theme-Color-Lt);
+  transition: 0.3s ease-in linear;
+}
+
+thead tr:hover,
+thead tr:focus {
+  background-color: #fff;
+  transition: 0.3s ease-in linear;
+}
+
+tfoot tr {
+  border-top: 2px solid var(--Theme-Color);
+  border-bottom: none;
+}
+
+tfoot tr:hover:last-child,
+tfoot tr:focus:last-child {
+  background-color: #fff;
+}
+
+/*-------------------------------*/
+/*   Widgets Imports             */
+/*-------------------------------*/
+/*-------------------------------*/
+/*   _tab-panels.scss            */
+/*-------------------------------*/
+/* 
+Tab Panels & Sections:
+---------------------
+Original content is in Markdown and is parsed by 
+Static Site Generator.
+
+Therefore: CSS Attribute, Child, Adjacent and 
+General Sibling Selectors are used instead of
+a BEM naming convention.
+
+Tabs: (Use the "Input Check Box Hack" to hide/show content)
+Original example: https://codepen.io/oknoblich/pen/tfjFl (no longerin codepen)
+Similar example: https://codepen.io/BrandonBento/pen/MGmZyq
+*/
+/* Input Check Boxes & Labels */
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before {
+  content: '\f02c';
+}
+
+/* fa-tags */
+label[for*='2']:before {
+  content: '\f073';
+}
+
+/* fa-calendar */
+label[for*='3']:before {
+  content: '\f02d';
+}
+
+/* fa-book */
+label[for*='4']:before {
+  content: '\f1a9';
+}
+
+/* Drupal */
+label[for*='_ah']:before {
+  content: '\f186';
+}
+
+/* Crescent Moon */
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid var(--Theme-Color);
+  border-bottom: 1px solid #fff;
+}
+
+/* Mobile Screen - Hide Label Text / Display Icons */
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+}
+
+/* Sections & Headings */
+section h2 {
+  padding: .5em .5em .75em .5em;
+  margin-bottom: .5em;
+  color: var(--Theme-Color-Dk);
+  border-top: 3px solid var(--Theme-Color);
+  border-bottom: 3px solid var(--Theme-Color);
+}
+
+@media (min-width: 768px) {
+  section h2 {
+    margin-bottom: 1.0em;
+  }
+}
+
+section h3 {
+  color: var(--Theme-Color-Dk);
+}
+
+section#content1,
+section#content2,
+section#content3,
+section#content4,
+section#content_ah {
+  display: none;
+  padding: 1em 10px 10px 10px;
+  margin-top: 0;
+  border: 1px solid #ddd;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab_ah:checked ~ #content_ah {
+  display: block;
+}
+
+section#content1 h4 {
+  font-weight: normal;
+}
+
+/* Ordered List Items */
+section#content1 li,
+section#content2 li,
+section#content3 li,
+section#content4 li,
+section#content_ah li {
+  padding-left: 0.5em;
+}
+
+section#content1 ol,
+section#content2 ol,
+section#content3 ol,
+section#content4 ol,
+section#content_ah ol {
+  margin-bottom: 1.5em;
+}
+
+/*-------------------------------*/
+/*   _accordion.scss             */
+/*-------------------------------*/
+.accordion_button {
+  width: 100%;
+  color: #555;
+  background-color: var(--Theme-Color-Md);
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  text-align: left;
+  padding: .5em .5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+}
+
+.accordion_button:after {
+  content: '\f055';
+  font-family: "fontawesome";
+  font-size: 14px;
+  float: right;
+}
+
+.accordion_button.is-open:after {
+  content: '\f056';
+}
+
+.accordion_button:hover, .accordion_button.is-open {
+  background-color: var(--Theme-Color);
+  color: #fff;
+}
+
+.accordion_button:nth-of-type(1n) {
+  border-top: none;
+}
+
+.accordion_div_content {
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.accordion_div_content ul {
+  padding: 0;
+}
+
+.accordion_div_content ul > li {
+  line-height: 2;
+  border-bottom: 1px dotted var(--Theme-Color-Md);
+  padding-left: 1em;
+}
+
+.accordion_div_content ul > li:last-child {
+  border-bottom: 2px solid var(--Theme-Color-Md);
+}
+
+.accordion_div_content ul > li:hover, .accordion_div_content ul > li:focus {
+  background-color: var(--Theme-Color-Lt);
+}
+
+/*-------------------------------*/
+/*   _theme-sidebar.scss         */
+/*-------------------------------*/
+/* Sidebar Element, H3 Text, ahref */
+aside {
+  display: none;
+  flex-shrink: 0;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  width: 100%;
+  transition: all .3s;
+  animation: 0.3s ease-in-out sidebaropen;
+  /*
+    svg {
+        width: 82px;
+        fill: $White;
+        padding: 0 .5em .25em 0;
+        float: right;
+    }
+    */
+}
+
+@media (min-width: 768px) {
+  aside {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    display: block;
+    width: 300px;
+    transition: all .3s;
+  }
+}
+
+aside.aside-bgcolor--bldg {
+  background-color: var(--Theme-Color-Md);
+}
+
+aside.aside-bgcolor--support {
+  background-color: var(--Theme-Color-Lt);
+  border: 2px solid var(--Theme-Color);
+}
+
+aside.aside-bgcolor--system {
+  background-color: var(--Theme-Color-Lt);
+  border: 2px solid var(--Theme-Color);
+}
+
+aside h3 {
+  padding: .5em 0 .5em .5em;
+}
+
+aside a {
+  color: #555;
+  width: 100%;
+}
+
+.aside-mobile--show {
+  display: block;
+  flex-shrink: 0;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  width: 100%;
+  transition: all .3s;
+}
+
+@keyframes sidebaropen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*-------------------------------*/
+/*   top-button.scss             */
+/*-------------------------------*/
+.go--top {
+  position: fixed;
+  bottom: 120px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: var(--Theme-Color-Md);
+  border: 2px solid var(--Theme-Color);
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.4);
+  color: #F3F3F3;
+  text-align: center;
+  line-height: 3em;
+}
+
+@media (min-width: 768px) {
+  .go--top {
+    bottom: 145px;
+  }
+}
+
+.go--top span:after {
+  font-family: 'fontawesome';
+  content: "\f106";
+  font-size: 4em;
+}
+
+/*# sourceMappingURL=application.css.map */

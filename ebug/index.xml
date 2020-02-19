@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Sentara Computer Operations</title>
+    <link>/</link>
+    <description>Recent content in Home on Sentara Computer Operations</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Jan 2020 16:30:18 -0500</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>BMS</title>
+      <link>/building/building_bms.html</link>
+      <pubDate>Sat, 25 Jan 2020 16:30:18 -0500</pubDate>
+      
+      <guid>/building/building_bms.html</guid>
+      <description>Issue 1 Troubleshoot  Elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est. Sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis? Consectetur adipiscing elit duis tristique sollicitudin nibh sit. At quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit, scelerisque in dictum!</description>
+    </item>
+    
+    <item>
+      <title>Building-Test</title>
+      <link>/building/building.html</link>
+      <pubDate>Sat, 25 Jan 2020 16:30:18 -0500</pubDate>
+      
+      <guid>/building/building.html</guid>
+      <description>Issue 1 Troubleshoot  Elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est. Sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis? Consectetur adipiscing elit duis tristique sollicitudin nibh sit. At quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit, scelerisque in dictum!</description>
+    </item>
+    
+  </channel>
+</rss>

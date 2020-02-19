@@ -1,0 +1,28 @@
+<!-- content_2.html -->
+<!--section id="content2": Paging for Buisness Hours  -->
+<section id="content2">
+  <table>
+    <thead>
+      <tr>
+	<th>Service Now Group</th>
+	<th>ID</th>
+	<th>AMCOM Group</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+	<td colspan="3">{{ .Params.Support_date }}</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      {{ range  .Params.Bh_support  }}
+      <tr>
+	<td>{{ .snow_group }}</td>
+	<td>{{ .id }}</td>
+	<td>{{ .amcom }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</section>
+<!-- End of Paging for Business Hours -->
